@@ -24,7 +24,7 @@ public class Product {
 		this.quantity = 0; //商品個数初期化
 		this.description = null; //商品説明文初期化
 		this.selldate = null; //出品日初期化
-		this.deposit_status = null;//入金状況初期方
+		this.deposit_status = null;//入金状況初期化
 
 	}
 
