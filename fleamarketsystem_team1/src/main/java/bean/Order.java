@@ -15,7 +15,7 @@ public class Order {
 	/**
 	 * 購入する商品のID
 	 */
-	private String productid;
+	private String productid;　ｓ
 	/**
 	 * 購入する商品数
 	 */
