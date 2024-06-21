@@ -1,5 +1,9 @@
 package bean;
 
+//6月21日11:00分ごろに石井がコードを追加しました。
+//変更点は「注文番号」「取引状況」「入金状況」「発送状況」の
+//フィールド変数、コンストラクタ、get set メソッドを追加しました。
+
 /**
  * 注文情報（オーダーNo、ユーザーID、書籍のISBN、購入する書籍数、購入日付）を 一つのオブジェクトとしてまとめるためのDTOクラス
  *
@@ -7,33 +11,61 @@ package bean;
  *
  */
 public class Order {
+	
+	//注文番号
+	private int order_no;
 
 	/**
 	 * 購入するユーザーのID
 	 */
 	private String userid;
-	/**
-	 * 購入する商品のID
-	 */
+	
+	//購入する商品のID
 	private String productid;
-	/**
-	 * 購入する商品数
-	 */
+	
+	//購入する商品数
 	private int quantity;
+	
+	/**
+	 * 取引状況
+	 */
+	private String dealing;
 	/**
 	 * 売上日
 	 */
 	private String solddate;
+	
+	//入金状況
+	private String deposit;
+	
+	//発送状況
+	private String shipment;
 
 	/**
 	 * コンストラクタ<br>
 	 * 注文情報（商品ID、ユーザーID、商品数、売上日）の初期設定をおこなう
 	 */
 	public Order() {
+		this.order_no = 0 ;
 		this.userid = null;
-		this.productid = null;
-		this.quantity = 0;
+		this.productid = null ;
+		this.quantity = 0 ;
+		
+		this.dealing = null;
 		this.solddate = null;
+		this.deposit = null;
+		this.shipment = null;
+	}
+	
+	
+	//get set メソッド
+	//注文番号
+	public int getOrder_no() {
+		return order_no;
+	}
+	
+	public void setOrder_no(int order_no) {
+		this.order_no = order_no;
 	}
 
 	/**
@@ -54,45 +86,37 @@ public class Order {
 	public void setUserid(String userid) {
 		this.userid = userid;
 	}
-
-	/**
-	 * 購入する商品IDを取得する
-	 *
-	 * @return 購入する商品ID
-	 */
+	
+	//商品ID
 	public String getProductid() {
-		return productid;
+		return productid ;
 	}
-
-	/**
-	 * 購入する商品IDを設定する
-	 *
-	 * @param isbn
-	 *            設定する商品ID
-	 */
+	
 	public void setProductid(String productid) {
-		this.productid = productid;
+		this.productid = productid ;
 	}
 
-	/**
-	 * 購入する商品数を取得する
-	 *
-	 * @return 購入する商品数
-	 */
+	//購入商品数
+	
 	public int getQuantity() {
-		return quantity;
+		return quantity ;
 	}
-
-	/**
-	 * 購入する商品数を設定する
-	 *
-	 * @param quantity
-	 *            設定する商品数
-	 */
+	
 	public void setQuantity(int quantity) {
-		this.quantity = quantity;
+		this.quantity = quantity ;
 	}
 
+	
+	//取引状況
+	
+	public String getDealing() {
+		return dealing ;
+	}
+	
+	public void setDealing(String dealing) {
+		this.dealing = dealing ;
+	}
+	
 	/**
 	 * 売上日付を取得する
 	 *
@@ -111,4 +135,24 @@ public class Order {
 	public void setSolddate(String solddate) {
 		this.solddate = solddate;
 	}
+	
+	//入金状況
+	public String getDeposit() {
+		return deposit ;
+	}
+	
+	public void setDeposit(String deposit) {
+		this.deposit = deposit ;
+	}
+	
+	//発送状況
+	public String getShipment() {
+		return shipment ;
+	}
+	
+	public void setShipment(String shipment) {
+		this.shipment = shipment ;
+	}
+	
+	
 }
