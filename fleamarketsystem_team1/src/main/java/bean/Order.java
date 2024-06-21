@@ -4,7 +4,7 @@ package bean;
  * 注文情報（オーダーNo、ユーザーID、書籍のISBN、購入する書籍数、購入日付）を 一つのオブジェクトとしてまとめるためのDTOクラス
  *
  * @author KandaITSchool
- *ｓｓｓ
+ *
  */
 public class Order {
 
