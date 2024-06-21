@@ -1,5 +1,3 @@
-//作成者　石井和希　株式会社システムクエスト
-
 package dao;
 
 import java.sql.Connection;
